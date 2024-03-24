@@ -1,0 +1,219 @@
+body, html{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-family: 'inriaSans', sans-serif;
+}
+.barraNav {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: #034F84 ;
+    height: 25px;
+    width: 100%;
+}
+.containerFig{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+   
+}
+.containerFig img{
+    
+    border-radius: 2px;
+    top: 10%;
+    left: 50%;
+    float: right;
+    position: absolute;
+    max-height: 400px;
+    max-width: 600px;
+
+}
+.imgLogo{
+    display: flex;
+    align-items: center;
+    width: 320px;
+    display: flex;
+    position: absolute;
+    left: 15%;
+    top: 60px;
+    margin: 0;
+}
+.imgLogo img{
+    height: 196px;
+    width: 320px;
+}
+.linhaDeMarcacao{
+    
+    background-color: black;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    height: 3px ;
+
+    
+}
+hr{ 
+
+
+    margin: 0;
+    position: absolute;    
+    top: 510px;
+    left: 50%;
+    width: 600px;
+    border: 0;
+    border-top: 2px solid black;
+    
+}
+
+
+    
+.containerLinha{
+    display: flex;
+    
+    justify-content: space-around;
+    width: 600px ;
+    margin-top: 10px;
+    position: absolute;
+    left: 50%;
+    top: 520px;
+    
+}
+.linhaVertical{
+    position: relative;
+    border: 0;
+    width: 3px;
+    height: 25px;
+    border-left: 2px solid black;
+    margin:0 90px 0  ;
+    align-items: flex-end;
+}
+
+   
+.linhaVertical .icon {
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    width: 40px;
+    height: 40px;
+}
+.linhaVertical p{
+    text-align: center;
+    transform: translateX(-50%);
+    position: absolute;
+    font-size: 14px solid ;
+    font-family: 'inria Sans';
+    top: 90px;
+    margin: 0;
+
+}
+.containerFig .linhaVertical{
+    transition: transform 0.4s ease-in-out;
+}
+.containerFig .linhaVertical:hover{
+    transform: scale(1.1)
+}
+
+.login{
+    
+    text-align: center;
+    top: 250px;
+    left: 15%;
+    display: block;
+    position: absolute;
+    width: 320px;
+    height: 400px;
+}
+.login input[type=password], input[type=email]{
+    height: 20px;
+    width: 85%;
+    padding: 5px;
+    border-radius: 2px ;
+    border: 2px solid black ;
+    
+}
+.login a{
+    display: flex;
+    font-family: 'inria Sans';
+    text-decoration: none;
+    color: black;
+
+}
+.login p{
+    font-size: 17px;
+    text-align:justify;
+    font-family: 'inria Sans';
+}
+
+.login  .botao{
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    top: 250px;
+    left: 25% ;
+    
+}
+.botao{
+    
+    height: 40px;
+    width: 150px;
+    font-size: 19px;
+    font-family: 'inria Sans' ;
+    color: black;
+    background-color: white;
+    border-radius: 2px;
+    animation-name: botao1;
+    transition: background-color 0.3 ease-in-out  ;
+    cursor: pointer;
+    
+}
+.botao:hover{
+    background-color: #034F84;
+    color: white;
+}
+.link{
+    display: block;
+    position: absolute; 
+    top: 350px;
+}
+@media (max-width: 1300px) {
+    *{
+        font-size: 14px;
+    }
+    
+    .login input[type=password], input[type=email]{
+        height: 15px;
+        width: 70%;
+    }
+    .login.botao{
+        width: auto;
+    }
+    .containerFig img{
+       width: auto;
+    
+    }
+    .barraNav div{
+        width: 100%
+    }
+}
+@media (max-width:900px) and (min-width:30px) {
+    *{
+        font-size: 10px
+    }
+    .containerFig {
+        display: none;
+    }
+    .login input[type=password], input[type=email]{
+        height: 15px;
+        width: 70%;
+    }
+    .login{
+        margin: auto;
+        
+    }
+
+    
+}
