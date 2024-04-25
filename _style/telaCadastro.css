@@ -25,7 +25,7 @@ h3{
     text-align: center;
     margin-top: 20px;
     width: 50%;
-    
+    height: 100%;
 
 }
 p{      
@@ -55,6 +55,14 @@ p{
 }
 .botao{
     margin-top: 1.5%;
+}
+form.form{
+    height:100%;
+}
+.divInput button#botaoCadastro.botao{
+    height:8% ;
+    width: 30%;
+    margin-top: 2.5%;
 }
 .input[type="number"]{ /* para tirar o <>*/
     -webkit-appearance: textfield;
