@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="PT-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,60 +9,68 @@
     <link href='https://fonts.googleapis.com/css?family=Inria Sans' rel='stylesheet'>
 
 </head>
+
 <body>
-    
-        <div  class="barraNav"> </div>
-   
+
+    <div class="barraNav"> </div>
+
 
     <figure class="containerFig">
         <img src="_img/empresarios-trabalhando-juntos.jpg" alt="empressarios trabalhando juntos ">
 
-        <hr >
-            <div class="containerLinha">
-                <div class="linhaVertical">
-                    <img class="icon" src="_img/admissao.png" alt="">
-                    <p>Admissão</p>
-                </div>
-                <div class="linhaVertical">
-                    <img class="icon" src="_img/ajuste.png" alt="">
-                    <p>Ajuste de Ponto</p>
-                </div>
-                <div class="linhaVertical">
-                    <img class="icon" src="_img/ferias.png" alt="">
-                    <p>Férias</p>
-                </div>
-                <div class="linhaVertical">
-                    <img class="icon" src="_img/holerite.png" alt="">
-                    <p>Holerite</p>
-                </div>
+        <hr>
+        <div class="containerLinha">
+            <div class="linhaVertical">
+                <img class="icon" src="_img/admissao.png" alt="">
+                <p>Admissão</p>
             </div>
-        
+            <div class="linhaVertical">
+                <img class="icon" src="_img/ajuste.png" alt="">
+                <p>Ajuste de Ponto</p>
+            </div>
+            <div class="linhaVertical">
+                <img class="icon" src="_img/ferias.png" alt="">
+                <p>Férias</p>
+            </div>
+            <div class="linhaVertical">
+                <img class="icon" src="_img/holerite.png" alt="">
+                <p>Holerite</p>
+            </div>
+        </div>
+
     </figure>
 
 
     <figure class="imgLogo">
         <img src="_img/loog.png" alt="Imagem logo 'TIME WISE'">
-            
+
     </figure>
 
     <section class="login">
-       
-        <p >usuario</p>
-        <input type="email" name="email" id="email" placeholder="E-mail"> </br>
-        <p>senha</p>
-        <input type="password" name="password" id="password" placeholder="Password">
-        <a class="esqueciSenha" href="">esqueçi a senha</a>
-        
-        <input class="botao" type="button" value="LOG IN">
-        <div class="linha01"></div>
-
-        <a class="link" id="botaoCadastrar" href="telaCadastro.html">Não tem acesso ? clique aqui</a>
+        <div class="divLogin">
+            <p>Usuário</p>
+            <input type="email" name="email" id="email" placeholder="E-mail"><br>
+            <p>Senha</p>
+            <input type="password" name="password" id="password" placeholder="Password">
+            <a class="esqueciSenha" href="#">Esqueci a senha</a><br>
+            <button id="botao"> Login
+            </button>
+            <div class="linha01"></div>
+            <!--<a class="link" id="botaoCadastrar" href="telaCadastro.html">Não tem acesso? Clique aqui</a>-->
+            <div id="respostaLogin">
+                <p></p>
+            </div>
+        </div>
     </section>
 
-    
-    <script>
-        
+
+    <!--POP UP -->
+
+
+    <script src="./_js/login.js">
+
     </script>
 
 </body>
+
 </html>

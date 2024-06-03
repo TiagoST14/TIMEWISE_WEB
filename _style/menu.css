@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'inriaSans', sans-serif;
+}
+.head{
+    width: 100%;
+    background-color: #034F84 ;
+    box-shadow: 0px 2px black; 
+    position: relative;  
+    display: flex;
+    justify-content: space-between; 
+}
+.head img{
+    width: 10%;
+    margin-left: 20px;
+}
+.head span{
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 1px 1px black;
+    
+}
+.head button{
+    height: 40px;
+    width: 70px;
+    margin-top: 3vh;
+    margin-right: 2vh;
+    background-color: transparent;
+    color: white;
+    border: 1px solid black;
+    font-size: 20px;
+    box-shadow: 2px 2px black;
+    border-radius: 10px;
+    transition: .3s;
+}
+.head button:hover{
+    scale: 1.1;
+}
+.head button{
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    
+    border-radius: 3px;
+    letter-spacing: 1px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    border: none;
+    
+
+    height: 40px;
+    width: 100px;
+    margin-top: 3vh;
+    margin-right: 2vh;
+    background-color: transparent;
+    color: white;
+    border: 1.8px solid black;
+    font-size: 20px;
+    box-shadow: 2px 2px black;
+    border-radius: 10px;
+    transition: .3s;
+}
+button > svg {
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 20px;
+    transition: all 0.4s ease-in;
+}
+button:hover > svg {
+    font-size: 1.5em;
+    transform: translateX(-8px);
+   }
+.head button:hover{
+    font-size: 1.2em;
+    transform: translateX(-8px);
+    scale: 1.1;
+}
