@@ -3,10 +3,10 @@ document.addEventListener("DOMContentLoaded", function() {
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
         
-        //*if (email === "" || password === "") {
-        //    alert("Por favor, preencha todos os campos.");
-          //  return;
-        //}
+        if (email === "" || password === "") {
+          alert("Por favor, preencha todos os campos.");
+            return;
+        }
 
        
         // Criação do objeto
@@ -64,20 +64,3 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-function criaP(){
-    const p = document.createElement('p')
-    return p;
-}
-function setRes(msg,isValid){
-    const resultado = document.querySelector("#respostaLogin");
-    resultado.innerHTML= '';
-    const p = criaP();
-
-    if(isValid){
-        p.classList.add('res_bom');
-    } else{
-        p.classList.add('res_ruim');
-    }
-    p.innerHTML = msg;
-    resultado.appendChild(p);
-}
