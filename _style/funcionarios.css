@@ -1,0 +1,105 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh
+}
+.cardFuncionario {
+    border-radius: 13px;
+    height: 100px;
+    width: 30%;
+    margin-top: 3rem;
+    background-color: #034F84;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    cursor: pointer;
+}
+.cardFuncionario h5{
+    padding: 4px;
+    font-size: 15px;
+    
+}
+.divBusca{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.divBusca input{
+    padding: 10px;
+    width: 20%;
+    border-radius: 12px;
+    border: 1px solid #034F84;
+}
+.divBusca input:active{
+    border: 3px solid #034F84;
+}
+
+.button {
+    --main-focus: #2d8cf0;
+    --font-color: #323232;
+    --bg-color-sub: #dedede;
+    --bg-color: #eee;
+    --main-color: #323232;
+    position: relative;
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--main-color);
+    box-shadow: 4px 4px var(--main-color);
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .button, .button__icon, .button__text {
+    transition: all 0.3s;
+  }
+  
+  .button .button__text {
+    transform: translateX(22px);
+    color: var(--font-color);
+    font-weight: 600;
+  }
+  
+  .button .button__icon {
+    position: absolute;
+    transform: translateX(109px);
+    height: 100%;
+    width: 50px;
+    background-color: var(--bg-color-sub);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 35.2px;
+  }
+  
+  .button .svg {
+    width: 20px;
+    fill: var(--main-color);
+    
+    
+  }
+  
+  .button:hover {
+    background: var(--bg-color);
+    
+  }
+  
+  .button:hover .button__text {
+    color: transparent;
+  }
+  
+  .button:hover .button__icon {
+    width: 100%;
+    transform: translateX(0);
+    
+  }
+  
+  .button:active {
+    transform: translate(3px, 3px);
+    box-shadow: 0px 0px var(--main-color);
+    
+  }
