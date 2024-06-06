@@ -23,6 +23,7 @@ function cadastroEmpresa(){
         });
         
         console.log(usuarios)
+    
     }
     form.addEventListener('submit',recebeForm);
 
