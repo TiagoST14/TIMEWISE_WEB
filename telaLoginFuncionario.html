@@ -48,25 +48,16 @@
 
     </figure>
 
-    <div class="tipoUser" id="tipoUser">
-        <p>Selecione o modo de entrada:</p>
-        <button id="botaoFunc" onclick="entrarComoFunc(), exibirLoginFunc()">Funcionario</button>
-        <button id="botaoAdm" onclick="entrarComoAdm() , exibirLoginAdm()" >Administrador</button>
-    </div>'
-
-    <!-- PAGINA DE LOGIN DO ADM -->
-
-    <section class="login" id="loginAdm">
-        <div class="divLogin" id="divLogin">
-            <p>Login Administrador</p>
-            <p>Usuário</p>
-            <input type="email" name="email" id="email" placeholder="E-mail"><br>
+    <section class="login">
+        <div class="divLogin">
+            <p>CPF</p>
+            <input type="cpf" name="cpf" id="cpf" placeholder="CPF"><br>
             <p>Senha</p>
             <input type="password" name="password" id="password" placeholder="Senha">
             <a class="esqueciSenha" href="#">Esqueci a senha</a><br>
     
             <!-- Adicionando o reCAPTCHA -->
-            <span id="recaptchaAdm"></span>
+            <div class="g-recaptcha" data-sitekey="6LfwolwqAAAAAOUoPB0l49uZ5zpmZrt7Y-8_CNEr"></div>
             
             <button id="botao">Login</button>
     
@@ -75,34 +66,6 @@
             </div>
         </div>
     </section>
-
-    <!-- PAGINA DE LOGIN DO FUNCIONARIO COM CPF -->
-
-    <section class="login" id="loginFunc">
-        <div class="divLoginFunc" id="divLoginFunc">
-            <p>Login Funcionário</p>
-            <p>CPF</p>
-            <input type="text" name="cpf" id="cpf" placeholder="CPF"><br>
-            <p>Senha</p>
-            <input type="password" name="passwordFunc" id="passwordFunc" placeholder="Senha">
-            <a class="esqueciSenha" href="#">Esqueci a senha</a><br>
-    
-            <!-- Adicionando o reCAPTCHA
-            <div class="g-recaptcha" data-sitekey="6LfwolwqAAAAAOUoPB0l49uZ5zpmZrt7Y-8_CNEr"></div> -->
-            
-            
-            <button id="botaoFunc2">Login</button>
-            
-    
-            <div id="loginMsg" class="hidden">
-                Login efetuado com sucesso!
-            </div>
-        </div>
-    </section>
-
-
-    <!-- RECAPTCHA COMUM -->
-<div id="recaptchaContainer" class="g-recaptcha" style="display: none;" data-sitekey="6LfwolwqAAAAAOUoPB0l49uZ5zpmZrt7Y-8_CNEr"></div>
     
 
 
@@ -115,8 +78,10 @@
     </div>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-    <script src="/TIMEWISE_WEB/_js/login.js" ></script>
-    <script src="/TIMEWISE_WEB/_js/VALIDAÇÕES/validacaoCpf.js"></script>
+    <script src="/TIMEWISE_WEB/_js/loginFuncionario.js">
+
+    </script>
+
 </body>
 
 </html>

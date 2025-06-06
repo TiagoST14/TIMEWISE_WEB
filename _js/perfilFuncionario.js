@@ -1,29 +1,12 @@
-
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById('card_funcionario').addEventListener("click",function(){
-                
-        window.location.href = "perfilFuncionario.html";
-    });
-    document.getElementById('sair').addEventListener('click', function(){
-        window.location.href = "home.html"
-    })
-    document.getElementById('novoFuncionario').addEventListener('click', function(){
-        window.location.href = "novoFuncionario.html"
-    })
-    document.getElementById('voltar_funcionario').addEventListener('click', function(){
-        window.location.href = "funcionarios.html"
-    })
-});
-
 document.addEventListener('DOMContentLoaded', () => {
     const formBusca = document.querySelector('.formBusca');
 
     formBusca.addEventListener('submit', async function (evento) {
         evento.preventDefault();
-        const inputBusca = document.getElementById('buscaNome').value;
+        const inputBusca = document.getElementById('busca').value;
 
         try {
-            const response = await fetch(`http://localhost:4000/buscar?nome=${encodeURIComponent(inputBusca)}`, {
+            const response = await fetch(`http://localhost:3000/buscar?nome=${encodeURIComponent(inputBusca)}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',

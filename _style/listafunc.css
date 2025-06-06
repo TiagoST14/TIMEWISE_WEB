@@ -1,0 +1,140 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'inriaSans', sans-serif;
+  max-height: 100vh;
+}
+
+.head{
+  width: 100%;
+  background-color: #034e84 ;
+  box-shadow: 0px 2px black; 
+  position: relative;  
+  display: flex;
+  justify-content: space-between; 
+  
+}
+
+.head img{
+  width: 10%;
+  margin-left: 20px;
+}
+
+.head span{
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 1px 1px black;
+  
+}
+.head button{
+  display: flex;
+  
+  align-items: center;
+  justify-content: center;
+  
+  border-radius: 3px;
+  letter-spacing: 1px;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  border: none;
+  
+
+  height: 40px;
+  width: 100px;
+  margin-top: 3vh;
+  margin-right: 2vh;
+  background-color: transparent;
+  color: white;
+  border: 1.8px solid black;
+  font-size: 20px;
+  box-shadow: 2px 2px black;
+  border-radius: 10px;
+  transition: .3s;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 50px auto;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+th {
+  background-color: #f8f8f8;
+  text-align: left;
+}
+
+td {
+  text-align: left; /* Para garantir que o texto no td fique alinhado à esquerda */
+}
+
+
+button {
+  background-color: #e74c3c; /* Cor de fundo do botão */
+  color: white; /* Cor do texto */
+  border: none; /* Sem borda */
+  padding: 5px 10px; /* Espaçamento interno do botão */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  border-radius: 5px; /* Bordas arredondadas */
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: #c0392b; /* Cor do botão ao passar o mouse */
+}
+
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.search-container input {
+  padding: 10px;
+  width: 40%;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-container button {
+  background-color: #2ecc71; /* Cor de fundo do botão */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.search-container button:hover {
+  background-color: #27ae60; /* Cor do botão ao passar o mouse */
+}

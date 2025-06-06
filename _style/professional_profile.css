@@ -1,0 +1,165 @@
+/* Reset e configuração básica */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inria Sans', sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0;
+}
+
+/* Estilização do contêiner principal */
+.profile-container {
+  width: 90%;
+  max-width: 800px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 20px;
+  margin-top: 20px; /* Reserva espaço para o cabeçalho */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Cabeçalho do perfil */
+.profile-header {
+  background-color: #007bff;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+  border-radius: 8px 8px 0 0;
+  position: relative;
+}
+
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: -60px auto 10px; /* Levanta a imagem para sobrepor o cabeçalho */
+  border: 4px solid #fff;
+  display: block;
+}
+
+.profile-header h2 {
+  font-size: 1.8em;
+  margin-bottom: 5px;
+}
+
+.profile-header p {
+  font-size: 1em;
+  margin: 5px 0;
+}
+
+/* Botões no cabeçalho */
+.profile-header button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #0056b3;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 0.9em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.profile-header button:hover {
+  background-color: #003d80;
+}
+
+/* Detalhes do perfil */
+.profile-details {
+  padding: 20px;
+}
+
+.profile-section {
+  margin-bottom: 20px;
+}
+
+.profile-section h3 {
+  font-size: 1.3em;
+  color: #007bff;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.profile-section p {
+  font-size: 1em;
+  color: #333;
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+}
+
+.profile-section p strong {
+  color: #555;
+  margin-right: 5px;
+}
+
+/* Estilização de inputs */
+.profile-section input {
+  width: 100%;
+  padding: 8px;
+  font-size: 1em;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 5px;
+  transition: border-color 0.3s;
+}
+
+.profile-section input:disabled {
+  background-color: #f9f9f9;
+}
+
+.profile-section input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Botão Salvar */
+#save-btn {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#save-btn:hover {
+  background-color: #218838;
+}
+
+#edit-btn{
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#edit-btn:hover {
+  background-color: #218838;
+}
