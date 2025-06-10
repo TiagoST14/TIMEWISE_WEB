@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ponto Eletrônico</title>
     <link rel="shortcut icon" type="image/jpg" sizes="32x32" href="/TIMEWISE_WEB/_img/logo.ico"/>
+    <title>Novo Menu</title>
     <link rel="stylesheet" href="/TIMEWISE_WEB/_style/menu.css">
     <link rel="stylesheet" href="/TIMEWISE_WEB/_style/menuFuncionario.css">
     <link rel="stylesheet" href="/TIMEWISE_WEB/_style/home.css">
@@ -38,6 +39,13 @@
     <div class="localizacao" id="cidade">Carregando...</div>
     <div class="condicao" id="descricao">--</div>
 </div>
+    
+
+    <div class="containerClima">
+        <p id="temp"></p>
+        <p id="cidade"></p>
+        <p id="descricao"></p>
+    </div>
 
 
 
@@ -64,6 +72,11 @@
 
     <!-- Modal de Confirmação -->
     <!-- <div id="modal-confirmacao" class="modal">
+   
+
+
+<!-- Modal de Confirmação -->
+<!-- <div id="modal-confirmacao" class="modal">
     <div class="modal-content">
         <span class="close" id="close-modal">&times;</span>
         <p id="modal-confirmacao-message">Você tem certeza que deseja bater o ponto?</p>
@@ -79,6 +92,10 @@
         <header>
             <img class="logoTime" src="/TIMEWISE_WEB/_img/loog.png" alt="Logo Time WIse">
             <h1><!--N TIRAR--></h1>
+        <div class="container">
+        <header>
+            <img class="logoTime" src="/TIMEWISE_WEB/_img/loog.png" alt="Logo Time WIse">
+             <h1><!--N TIRAR--></h1> 
             <div class="clock-container">
                 <div id="clock">00:00:00</div>
                 <div id="date">01/01/2025</div>
@@ -128,6 +145,38 @@
         </main>
 
 
+            <div class="punch-card">
+                <h2>Registro de Ponto</h2>
+                
+                <div class="punch-buttons">
+                    <button id="punch-in" class="punch-button">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Entrada
+                    </button>
+                    <button id="lunch-out" class="punch-button">
+                        <i class="fas fa-utensils"></i>
+                        Saída Almoço
+                    </button>
+                    <button id="lunch-in" class="punch-button">
+                        <i class="fas fa-utensils"></i>
+                        Retorno Almoço
+                    </button>
+                    <button id="punch-out" class="punch-button">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Saída
+                    </button>
+                </div>
+            </div>
+
+            <div class="records">
+                <h2>Registros do Dia</h2>
+                <div class="records-container" id="today-records">
+                    <!-- Os registros serão adicionados aqui via JavaScript -->
+                </div>
+            </div>
+        </main>
+
+        
 
         <footer>
             <p>Time Wise Sistema de Ponto Eletrônico &copy; 2025 - Todos os direitos reservados</p>

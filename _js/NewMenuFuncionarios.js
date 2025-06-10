@@ -65,6 +65,7 @@ function obterEndereco(latitude, longitude, callback) {
 }
 });
 obterEndereco();
+});
 // Função para registrar ponto
 function registerPunch(type) {
 
@@ -76,6 +77,7 @@ function registerPunch(type) {
     const time = `${hours}:${minutes}:${seconds}`;
     
     console.log(time)
+    
     // const usuarioLogElement = document.getElementById('usuario_log').value;
     // if (!usuarioLogElement) {
     //     alert('Por favor, insira seu ID de funcionário');
@@ -249,3 +251,36 @@ setInterval(apiClima, 900000);
 
 
 // GERAR PDF
+function apiClima(){
+        
+        const apiKey = '49da1130055f366bb350cf083fff2949'; 
+        const cidade = 'Campo Grande,BR'; 
+
+        const url = `http://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${apiKey}&units=metric&lang=pt_br`;
+
+       
+        fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Não foi possível obter os dados');
+                }
+                return response.json();
+            })
+            .then(data => {
+                const temperatura = data.main.temp;
+                const descricao = data.weather[0].description;
+                const nomeCidade = data.name;
+
+                
+                document.getElementById('cidade').textContent = `${nomeCidade}`;
+                document.getElementById('temp').textContent = `${temperatura}°C`;
+                document.getElementById('descricao').textContent = `${descricao.charAt(0).toUpperCase() + descricao.slice(1)}`;
+            })
+            .catch(error => {
+                document.getElementById('cidade').textContent = 'Erro ao obter dados da cidade';
+                document.getElementById('temp').textContent = '';
+                document.getElementById('descricao').textContent = '';
+                console.error(error);
+            });
+}
+apiClima(); 

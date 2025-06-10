@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="_style/style.css">
     <link rel='preconnect' href='https://fonts.googleapis.com/css?family=Inria Sans'>
     <link rel="shortcut icon" type="image/jpg" sizes="32x32" href="/TIMEWISE_WEB/_img/logo.ico" />
+    <link rel="stylesheet" href="_style/style.css">
+    
+    <link rel='preconnect' href='https://fonts.googleapis.com/css?family=Inria Sans' >
+    <link rel="shortcut icon" type="image/jpg" sizes="32x32" href="/TIMEWISE_WEB/_img/logo.ico"/>
 </head>
 
 <body>
@@ -46,6 +50,33 @@
 
         </figure>
     </section>
+<section class="containerImg">
+    <figure class="containerFig">
+        <img src="_img/empresarios-trabalhando-juntos.jpg" alt="empressarios trabalhando juntos ">
+        
+    
+        <div class="containerLinha">
+            <div class="linhaVertical">
+                <img class="icon" src="_img/admissao.png" alt="">
+                <p>Admissão</p>
+            </div>
+            <div class="linhaVertical">
+                <img class="icon" src="_img/ajuste.png" alt="">
+                <p>Ajuste de Ponto</p>
+            </div>
+            <div class="linhaVertical">
+                <img class="icon" src="_img/ferias.png" alt="">
+                <p>Férias</p>
+            </div>
+            <div class="linhaVertical">
+                <img class="icon" src="_img/holerite.png" alt="">
+                <p>Holerite</p>
+            </div>
+            <div class="loader"></div>
+        </div>
+
+    </figure>
+</section>
 
     <figure class="imgLogo">
         <img src="_img/loog.png" alt="Imagem logo 'TIME WISE'">
@@ -56,6 +87,7 @@
         <p>Selecione o modo de entrada:</p>
         <button id="botaoFunc" onclick="entrarComoFunc(), exibirLoginFunc()">Funcionario</button>
         <button id="botaoAdm" onclick="entrarComoAdm() , exibirLoginAdm()">Administrador</button>
+        <button id="botaoAdm" onclick="entrarComoAdm() , exibirLoginAdm()" >Administrador</button>
     </div>'
 
     <!-- PAGINA DE LOGIN DO ADM -->
@@ -74,6 +106,12 @@
 
             <button id="botao">Login</button>
 
+    
+            <!-- Adicionando o reCAPTCHA -->
+            <span id="recaptchaAdm"></span>
+            
+            <button id="botao">Login</button>
+    
             <div id="loginMsg" class="hidden">
                 Login efetuado com sucesso!
             </div>
@@ -98,6 +136,14 @@
             <button id="botaoFunc2">Login</button>
 
 
+    
+            <!-- Adicionando o reCAPTCHA
+            <div class="g-recaptcha" data-sitekey="6LfwolwqAAAAAOUoPB0l49uZ5zpmZrt7Y-8_CNEr"></div> -->
+            
+            
+            <button id="botaoFunc2">Login</button>
+            
+    
             <div id="loginMsg" class="hidden">
                 Login efetuado com sucesso!
             </div>
@@ -109,6 +155,8 @@
     <div id="recaptchaContainer" class="g-recaptcha" style="display: none;"
         data-sitekey="6LfwolwqAAAAAOUoPB0l49uZ5zpmZrt7Y-8_CNEr"></div>
 
+<div id="recaptchaContainer" class="g-recaptcha" style="display: none;" data-sitekey="6LfwolwqAAAAAOUoPB0l49uZ5zpmZrt7Y-8_CNEr"></div>
+    
 
 
     <!--POP UP -->
@@ -121,6 +169,8 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="/TIMEWISE_WEB/_js/acessibilidade/acessiblidade.js"></script>
     <script src="/TIMEWISE_WEB/_js/login.js"></script>
+
+    <script src="/TIMEWISE_WEB/_js/login.js" ></script>
     <script src="/TIMEWISE_WEB/_js/VALIDAÇÕES/validacaoCpf.js"></script>
 </body>
 

@@ -97,6 +97,11 @@ body{
     font-family: 'Roboto', sans-serif;
     background: linear-gradient(135deg, #f5f7fa 0%, #b6e0fd 100%);
     min-height: 100vh;
+body{
+font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #b6e0fd 100%);
+    min-height: 100vh;
+    padding: 20px;
     color: var(--dark-color);
 }
 .head{
