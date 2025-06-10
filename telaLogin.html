@@ -5,72 +5,123 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Time Wise</title>
-    <link rel="stylesheet" href="_style/style.css">
-    <link href='https://fonts.googleapis.com/css?family=Inria Sans' rel='stylesheet'>
 
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <link rel="stylesheet" href="_style/style.css">
+    <link rel='preconnect' href='https://fonts.googleapis.com/css?family=Inria Sans'>
+    <link rel="shortcut icon" type="image/jpg" sizes="32x32" href="/TIMEWISE_WEB/_img/logo.ico" />
 </head>
 
 <body>
 
     <div class="barraNav"> </div>
 
+    <section class="containerImg">
+        <figure class="containerFig">
+            <img src="_img/empresarios-trabalhando-juntos.jpg" alt="empressarios trabalhando juntos ">
 
-    <figure class="containerFig">
-        <img src="_img/empresarios-trabalhando-juntos.jpg" alt="empressarios trabalhando juntos ">
 
-        <hr>
-        <div class="containerLinha">
-            <div class="linhaVertical">
-                <img class="icon" src="_img/admissao.png" alt="">
-                <p>Admissão</p>
+            <div class="containerLinha">
+                <div class="linhaVertical">
+                    <img class="icon" src="_img/admissao.png" alt="">
+                    <p>Admissão</p>
+                </div>
+                <div class="linhaVertical">
+                    <img class="icon" src="_img/ajuste.png" alt="">
+                    <p>Ajuste de Ponto</p>
+                </div>
+                <div class="linhaVertical">
+                    <img class="icon" src="_img/ferias.png" alt="">
+                    <p>Férias</p>
+                </div>
+                <div class="linhaVertical">
+                    <img class="icon" src="_img/holerite.png" alt="">
+                    <p>Holerite</p>
+                </div>
+                <div class="loader"></div>
             </div>
-            <div class="linhaVertical">
-                <img class="icon" src="_img/ajuste.png" alt="">
-                <p>Ajuste de Ponto</p>
-            </div>
-            <div class="linhaVertical">
-                <img class="icon" src="_img/ferias.png" alt="">
-                <p>Férias</p>
-            </div>
-            <div class="linhaVertical">
-                <img class="icon" src="_img/holerite.png" alt="">
-                <p>Holerite</p>
-            </div>
-        </div>
 
-    </figure>
-
+        </figure>
+    </section>
 
     <figure class="imgLogo">
         <img src="_img/loog.png" alt="Imagem logo 'TIME WISE'">
 
     </figure>
 
-    <section class="login">
-        <div class="divLogin">
+    <div class="tipoUser" id="tipoUser">
+        <p>Selecione o modo de entrada:</p>
+        <button id="botaoFunc" onclick="entrarComoFunc(), exibirLoginFunc()">Funcionario</button>
+        <button id="botaoAdm" onclick="entrarComoAdm() , exibirLoginAdm()">Administrador</button>
+    </div>'
+
+    <!-- PAGINA DE LOGIN DO ADM -->
+
+    <section class="login" id="loginAdm">
+        <div class="divLogin" id="divLogin">
+            <p>Login Administrador</p>
             <p>Usuário</p>
             <input type="email" name="email" id="email" placeholder="E-mail"><br>
             <p>Senha</p>
-            <input type="password" name="password" id="password" placeholder="Password">
+            <input type="password" name="password" id="password" placeholder="Senha">
             <a class="esqueciSenha" href="#">Esqueci a senha</a><br>
-            <button id="botao"> Login
-            </button>
-            <div class="linha01"></div>
-            <!--<a class="link" id="botaoCadastrar" href="telaCadastro.html">Não tem acesso? Clique aqui</a>-->
-            <div id="respostaLogin">
-                <p></p>
+
+            <!-- Adicionando o reCAPTCHA -->
+            <span id="recaptchaAdm"></span>
+
+            <button id="botao">Login</button>
+
+            <div id="loginMsg" class="hidden">
+                Login efetuado com sucesso!
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGINA DE LOGIN DO FUNCIONARIO COM CPF -->
+
+    <section class="login" id="loginFunc">
+        <div class="divLoginFunc" id="divLoginFunc">
+            <p>Login Funcionário</p>
+            <p>CPF</p>
+            <input type="text" name="cpf" id="cpf" placeholder="CPF"><br>
+            <p>Senha</p>
+            <input type="password" name="passwordFunc" id="passwordFunc" placeholder="Senha">
+            <a class="esqueciSenha" href="#">Esqueci a senha</a><br>
+
+            <!-- Adicionando o reCAPTCHA
+            <div class="g-recaptcha" data-sitekey="6LfwolwqAAAAAOUoPB0l49uZ5zpmZrt7Y-8_CNEr"></div> -->
+
+
+            <button id="botaoFunc2">Login</button>
+
+
+            <div id="loginMsg" class="hidden">
+                Login efetuado com sucesso!
             </div>
         </div>
     </section>
 
 
+    <!-- RECAPTCHA COMUM -->
+    <div id="recaptchaContainer" class="g-recaptcha" style="display: none;"
+        data-sitekey="6LfwolwqAAAAAOUoPB0l49uZ5zpmZrt7Y-8_CNEr"></div>
+
+
+
     <!--POP UP -->
 
-
-    <script src="/TIMEWISE_WEB/_js/login.js">
-
-    </script>
-
+    <div class="acessibilidade">
+        <figure>
+            <img src="/TIMEWISE_WEB/_img/acessibilidade.png" alt="Logo da .acessibilidade">
+        </figure>
+    </div>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="/TIMEWISE_WEB/_js/acessibilidade/acessiblidade.js"></script>
+    <script src="/TIMEWISE_WEB/_js/login.js"></script>
+    <script src="/TIMEWISE_WEB/_js/VALIDAÇÕES/validacaoCpf.js"></script>
 </body>
 
 </html>

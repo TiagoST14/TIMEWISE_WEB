@@ -185,96 +185,40 @@ html {
 }
 
 .login {
-    position: absolute;
+
     text-align: center;
     top: 220px;
     left: 15%;
     display: block;
+    position: absolute;
     width: 320px;
-    height: 420px;
+    height: 400px;
     text-align: center;
 
 }
 
 
 .divLogin {
-    display: none;
-    position: absolute;
     background-color: #034F84;
     width: 100%;
-    height: 420px;
-    padding: 15px;
-    border-radius: 10px;
-    border: solid black 1px;
-    z-index: 100;
-    
-}
-.divLoginFunc{
-    display: none;
-    z-index: 50; /* Defina um valor um pouco menor */
-    position: absolute;
-    background-color: #034F84;
-    width: 100%;
-    height: 420px;
-    padding: 15px;
-    border-radius: 10px;
-    border: solid black 1px;
-    text-decoration: center;
-    box-shadow: 6px 10px 60px #034F84;
-}
-.tipoUser{
-    position: absolute;
-    background-color: #034F84;
-    width: 320px;
-    height: 420px;;
-    left: 15%;
-    top: 220px;
+    height: 400px;
     padding: 15px;
     border-radius: 10px;
     border: solid black 1px;
     text-decoration: center;
     box-shadow: 6px 10px +60px #034F84;
-    display: block;
-    z-index: 10;
+    perspective: 1000px;
 }
-.tipoUser button{
-    
-    position: relative;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    top: 20%;
-    width: 200px;
-    height: 50px;
-    margin-top: 10%;
-    text-align: center;
-    padding: 10px;
-}
-.tipoUser p{
-    font-size: 20px;
-    margin: 0 auto;
-    font-family: 'inriaSans', sans-serif;
-    color: white;
-    text-align: center;
 
-}
-.loginFunc input[type=password],
-input[type=text ] {
-    height: 20px;
-    width: 85%;
-    padding: 5px;
-    border-radius: 2px;
-    border: 2px solid rgb(255, 255, 255);
-}
 
 .login input[type=password],
-input[type=email] {
+input[type=cpf] {
     height: 20px;
     width: 85%;
     padding: 5px;
     border-radius: 2px;
     border: 2px solid rgb(255, 255, 255);
-    
+
 }
 
 .erroUser {
@@ -410,7 +354,6 @@ button:hover::before {
     font-family: 18px 'inria Sans';
     border-radius: 5px;
   }
-  
 @media (max-width: 1300px) {
     * {
         font-size: 14px;
@@ -420,7 +363,7 @@ button:hover::before {
     }
 
     .login input[type=password],
-    input[type=email] {
+    input[type=cpf] {
         height: 15px;
         width: 70%;
     }
@@ -449,7 +392,7 @@ button:hover::before {
     }
 
     .login input[type=password],
-    input[type=email] {
+    input[type=cpf] {
         height: 15px;
         width: 70%;
     }
@@ -507,178 +450,3 @@ button:hover::before {
     }
   }
   
-
-  /* Telas médias (tablets) */
-@media (max-width: 1300px) {
-    .containerFig img {
-        max-width: 500px;
-        left: 45%;
-    }
-    
-    .imgLogo {
-        left: 10%;
-    }
-    
-    .login,
-    .tipoUser {
-        left: 10%;
-    }
-    
-    .containerLinha {
-        left: 42%;
-        width: 500px;
-    }
-}
-
-/* Telas pequenas (tablets menores) */
-@media (max-width: 1024px) {
-    .containerFig img {
-        max-width: 400px;
-        top: 15%;
-    }
-    
-    .containerLinha {
-        top: 480px;
-        width: 400px;
-    }
-}
-
-/* Telas muito pequenas (smartphones) */
-@media (max-width: 768px) {
-    .containerFig img {
-        position: relative;
-        left: auto;
-        top: auto;
-        margin: 20px auto;
-        display: block;
-    }
-    
-    .imgLogo {
-        position: relative;
-        left: auto;
-        top: auto;
-        margin: 20px auto;
-    }
-    
-    .login,
-    .tipoUser {
-        position: relative;
-        left: auto;
-        top: auto;
-        margin: 20px auto;
-    }
-    
-    .containerLinha,
-    .linhaDeMarcacao {
-        display: none;
-    }
-    
-    .acessibilidade {
-        left: 85%;
-        top: 85%;
-    }
-}
-
-/* Ajustes para smartphones muito pequenos */
-@media (max-width: 480px) {
-    .imgLogo img {
-        width: 280px;
-        height: auto;
-    }
-    
-    .login,
-    .tipoUser,
-    .divLogin,
-    .divLoginFunc {
-        width: 95%;
-        height: auto;
-        padding: 10px;
-    }
-    
-    .botao {
-        width: 90%;
-    }
-    
-    .acessibilidade {
-        width: 70px;
-        height: 70px;
-        left: 80%;
-    }
-    
-    .acessibilidade img {
-        width: 50px;
-        height: 50px;
-    }
-}
-/* Garante que elementos focados sejam visíveis */
-:focus {
-  outline: 3px solid #034F84;
-  outline-offset: 2px;
-}
-
-/* Estilos para leitores de tela */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}
-
-/* Melhoria de contraste para links */
-a {
-  color: #034F84;
-  text-decoration: underline;
-}
-
-/* Ajustes para alto contraste */
-@media (prefers-contrast: more) {
-  body {
-    background: black;
-    color: white;
-  }
-  
-  input, button {
-    border: 2px solid white;
-  }
-}
-/* Garante que elementos focados sejam visíveis */
-:focus {
-  outline: 3px solid #034F84;
-  outline-offset: 2px;
-}
-
-/* Estilos para leitores de tela */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}
-
-/* Melhoria de contraste para links */
-a {
-  color: #034F84;
-  text-decoration: underline;
-}
-
-/* Ajustes para alto contraste */
-@media (prefers-contrast: more) {
-  body {
-    background: black;
-    color: white;
-  }
-  
-  input, button {
-    border: 2px solid white;
-  }
-}

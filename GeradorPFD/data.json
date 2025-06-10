@@ -1,0 +1,33 @@
+[
+    {
+    "nome":         "Tiago Gomez",
+    "data"      :   "05/06/2025",          
+    "entrada01" :   "08:00",
+    "saida01"   :   "11:00",
+    "entrada02" :   "13:00",
+    "saida02"   :   "18:00"
+},
+  {
+    "nome":         "Tiago Gomez",
+    "data"      :   "06/06/2025",          
+    "entrada01" :   "08:00",
+    "saida01"   :   "11:00",
+    "entrada02" :   "13:00",
+    "saida02"   :   "18:00"
+},
+  {
+    "nome":         "Tiago Gomez",
+    "data"      :   "07/06/2025",          
+    "entrada01" :   "08:00",
+    "saida01"   :   "11:00",
+    "entrada02" :   "13:00",
+    "saida02"   :   "18:00"
+},  {
+    "nome":         "Tiago Gomez",
+    "data"      :   "08/06/2025",          
+    "entrada01" :   "08:00",
+    "saida01"   :   "11:00",
+    "entrada02" :   "13:00",
+    "saida02"   :   "18:00"
+}
+]

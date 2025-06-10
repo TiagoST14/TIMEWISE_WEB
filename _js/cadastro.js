@@ -32,7 +32,7 @@ function cadastroEmpresa() {
         console.log('Dados do usuário:', usuario);
 
         // Envia os dados do usuário para a API
-        fetch('http://localhost:4000/registro', {
+        fetch('http://localhost:3000/registro', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

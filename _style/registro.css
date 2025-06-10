@@ -1,0 +1,529 @@
+/* Variáveis de cor */
+:root {
+    --primary-color: #034e84;
+    --primary-light: #b6e0fd;
+    --primary-lighter: #f5f7fa;
+    --text-dark: #2c3e50;
+    --text-light: #ecf0f1;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+}
+
+/* Reset e estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    color: var(--text-dark);
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--primary-lighter) 0%, var(--primary-light) 100%);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Efeitos de background */
+.background-effects {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(135deg, var(--primary-lighter) 0%, var(--primary-light) 100%);
+    overflow: hidden;
+}
+
+.background-effects::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: 
+        radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.8) 0%, transparent 20%),
+        radial-gradient(circle at 30% 70%, rgba(182, 224, 253, 0.6) 0%, transparent 20%);
+    animation: float 15s infinite alternate ease-in-out;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    100% {
+        transform: translate(50px, 50px) rotate(2deg);
+    }
+}
+
+/* Header Moderno */
+.main-header {
+    width: 100%;
+    background-color: var(--primary-color);
+    box-shadow: var(--shadow);
+    padding: 1rem 2rem;
+    position: relative;
+    z-index: 10;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+.logo {
+    width: 130px;
+    height: auto;
+    transition: var(--transition);
+    margin-right: auto;
+}
+
+.logo:hover {
+    transform: rotate(-5deg) scale(1.05);
+}
+
+.welcome-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-light);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.welcome-message span {
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+.welcome-message p {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+}
+
+.logout-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-light);
+    border: 2px solid white;
+    border-radius: 50px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    backdrop-filter: blur(5px);
+    margin-left: auto;
+}
+
+.logout-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.logout-button svg {
+    transition: var(--transition);
+}
+
+.logout-button:hover svg {
+    transform: translateX(-3px);
+}
+
+/* Container principal */
+.registros-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    position: relative;
+    z-index: 1;
+}
+
+.page-title {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.page-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: var(--primary-color);
+}
+
+/* Seção de filtros */
+.filtros-section {
+    margin-bottom: 2rem;
+}
+
+.filtro-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    border: 1px solid var(--primary-color);
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+}
+
+.filtro-card h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.filtro-card h2::before {
+    content: "🔍";
+    font-size: 1.2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: var(--transition);
+    background-color: #f9f9f9;
+}
+
+.form-input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(3, 78, 132, 0.1);
+    background-color: white;
+}
+
+select.form-input {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1rem;
+    padding-right: 2.5rem;
+}
+
+/* Botões */
+.button-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.primary-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.primary-button:hover {
+    background-color: #023a5e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.secondary-button {
+    background-color: white;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.secondary-button:hover {
+    background-color: var(--primary-lighter);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Seção de resultados */
+.resultados-section {
+    background: white;
+    border-radius: 8px;
+    border: 1px solid var(--primary-color);
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+.resultados-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.resultados-header h2 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.resultados-header h2::before {
+    content: "📋";
+    font-size: 1.2rem;
+}
+
+.export-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--success-color);
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.export-button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Tabela de registros */
+.registros-table-container {
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+    border-radius: 6px;
+    border: 1px solid #eee;
+}
+
+.registros-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+}
+
+.registros-table th, 
+.registros-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.registros-table th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 500;
+    position: sticky;
+    top: 0;
+}
+
+.registros-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.registros-table tr:hover {
+    background-color: var(--primary-lighter);
+}
+
+.registros-table td {
+    vertical-align: middle;
+}
+
+/* Paginação */
+.paginacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.paginacao-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.paginacao-btn:hover:not(:disabled) {
+    background-color: #023a5e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.paginacao-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.pagina-atual {
+    font-weight: 500;
+    min-width: 100px;
+    text-align: center;
+}
+
+/* Mensagem quando não há registros */
+.sem-registros {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+    font-style: italic;
+}
+
+/* Footer */
+.main-footer {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    color: var(--text-dark);
+    font-size: 0.9rem;
+    position: relative;
+    z-index: 1;
+}
+
+.main-footer p {
+    opacity: 0.8;
+    transition: var(--transition);
+}
+
+.main-footer:hover p {
+    opacity: 1;
+}
+
+.main-footer strong {
+    font-weight: 600;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header-content {
+        flex-wrap: wrap;
+    }
+    
+    .welcome-message {
+        order: 1;
+        width: 100%;
+        margin-top: 1rem;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+    
+    .primary-button,
+    .secondary-button {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .registros-container {
+        padding: 1rem;
+    }
+    
+    .registros-table th, 
+    .registros-table td {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header {
+        padding: 1rem;
+    }
+    
+    .logo {
+        width: 100px;
+    }
+    
+    .welcome-message span {
+        font-size: 1.2rem;
+    }
+    
+    .welcome-message p {
+        font-size: 1.5rem;
+    }
+    
+    .logout-button {
+        padding: 0.6rem 1rem;
+        font-size: 1rem;
+    }
+    
+    .page-title {
+        font-size: 1.8rem;
+    }
+}

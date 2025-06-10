@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./_style/registro.css"> 
+    <title>Registros de Ponto - TimeWise</title>
+</head>
+<!-- Header Mantido Como Solicitado -->
+    <header class="main-header">
+        <div class="header-content">
+            <img src="./_img/logobranca.png" alt="TimeWise Logo" class="logo">
+            <button id="sair" class="logout-button">
+                <svg height="16" width="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+                    <path d="M874.690416 495.52477c0 11.2973-9.168824 20.466124-20.466124 20.466124l-604.773963 0 188.083679 188.083679c7.992021 7.992021 7.992021 20.947078 0 28.939099-4.001127 3.990894-9.240455 5.996574-14.46955 5.996574-5.239328 0-10.478655-1.995447-14.479783-5.996574l-223.00912-223.00912c-3.837398-3.837398-5.996574-9.046027-5.996574-14.46955 0-5.433756 2.159176-10.632151 5.996574-14.46955l223.019353-223.029586c7.992021-7.992021 20.957311-7.992021 28.949332 0 7.992021 8.002254 7.992021 20.957311 0 28.949332l-188.073446 188.073446 604.753497 0C865.521592 475.058646 874.690416 484.217237 874.690416 495.52477z"></path>
+                </svg>
+                Sair
+            </button>
+        </div>
+    </header>
+    
+<body>
+    <div class="background-effects"></div>
+    
+    <main class="registros-container">
+        <h1 class="page-title">Registros de Ponto</h1>
+        
+        <section class="filtros-section">
+            <div class="filtro-card">
+                <h2>Filtrar Registros</h2>
+                
+                <div class="form-group">
+                    <label for="funcionario">Funcionário:</label>
+                    <select id="funcionario" class="form-input">
+                        <option value="">Todos os funcionários</option>
+                        <option value="1">João Silva</option>
+                        <option value="2">Maria Souza</option>
+                        <option value="3">Carlos Oliveira</option>
+                    </select>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="data-inicio">Data Início:</label>
+                        <input type="date" id="data-inicio" class="form-input">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="data-fim">Data Fim:</label>
+                        <input type="date" id="data-fim" class="form-input">
+                    </div>
+                </div>
+                
+                <button id="btn-filtrar" class="primary-button">Filtrar</button>
+                <button id="btn-limpar" class="secondary-button">Limpar Filtros</button>
+            </div>
+        </section>
+        
+        <section class="resultados-section">
+            <div class="resultados-header">
+                <h2>Resultados</h2>
+                <button id="btn-exportar" class="export-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8.5 6.5a.5.5 0 0 0-1 0v3.793L6.354 9.146a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 10.293V6.5z"/>
+                        <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
+                    </svg>
+                    Exportar
+                </button>
+            </div>
+            
+            <div class="registros-table-container">
+                <table class="registros-table">
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Funcionário</th>
+                            <th>Entrada</th>
+                            <th>Saída Almoço</th>
+                            <th>Retorno Almoço</th>
+                            <th>Saída</th>
+                            <th>Horas Trabalhadas</th>
+                        </tr>
+                    </thead>
+                    <tbody id="registros-body">
+                        <!-- Dados serão preenchidos via JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="paginacao">
+                <button class="paginacao-btn" id="btn-anterior">Anterior</button>
+                <span class="pagina-atual">Página 1</span>
+                <button class="paginacao-btn" id="btn-proximo">Próxima</button>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="main-footer">
+        <p>Powered by <strong>TimeWise Enterprise</strong>™ 2024</p>
+    </footer>
+    
+    <script src="./_js/registro.js"></script> <!-- Lógica da página -->
+</body>
+</html>

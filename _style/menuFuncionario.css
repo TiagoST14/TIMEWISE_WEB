@@ -1,0 +1,707 @@
+:root {
+    --primary-color: #034F84;
+    --secondary-color: hsla(205, 100%, 26%, 70%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.botaoPonto {
+    height: 50px;
+    width: 100px;
+
+}
+
+
+:root {
+    --dark-color: #2c3e50;
+    --light-color: #ecf0f1;
+    --accent-color: #3498db;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.containerClima {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    background: linear-gradient(135deg, var(--dark-color), #34495e);
+    border-radius: 20px;
+    height: auto;
+    min-height: 120px;
+    width: auto;
+    min-width: 120px;
+    padding: 15px;
+    box-shadow: var(--shadow);
+    color: var(--light-color);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.containerClima:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.clima-icon {
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+    color: var(--accent-color);
+}
+
+.temperatura {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.localizacao {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.condicao {
+    font-size: 0.8rem;
+    margin-top: 5px;
+    text-transform: capitalize;
+}
+.clima-sol .clima-icon { color: #f39c12; }
+.clima-chuva .clima-icon { color: #3498db; }
+.clima-nublado .clima-icon { color: #95a5a6; }
+.clima-tempestade .clima-icon { color: #9b59b6; }
+.clima-neve .clima-icon { color: #ecf0f1; }
+.clima-noite .clima-icon { color: #9b59b6; }
+.clima-noite { background: linear-gradient(135deg, #1a1a2e, #16213e); }
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .containerClima {
+        bottom: 10px;
+        right: 10px;
+        min-width: 100px;
+        min-height: 100px;
+        padding: 10px;
+    }
+    
+    .clima-icon {
+        font-size: 2rem;
+    }
+    
+    .temperatura {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .containerClima {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        width: 100%;
+        border-radius: 0;
+        margin-top: 20px;
+    }
+}
+.menu {
+
+    background-color: var(--secondary-color);
+    height: 100vh;
+    width: 15%;
+}
+
+div.registrar .div_ponto {
+    background-color: #034e84d1;
+    height: 60px;
+    width: 200px;
+    margin: 0 auto;
+    border-radius: 10px;
+    transition: all 0.2s linear;
+    color: white;
+    border: solid black 2px;
+    padding: 2px;
+    cursor: pointer;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+.div_ponto{
+    height: 70px;
+    width: 100px;
+}
+.div_ponto h1 {
+    text-align: center;
+    font-size: 25px;
+    padding: 5px;
+}
+div.relogio h1{
+    text-align: center;
+
+}
+div.relogio{
+    margin: 0 auto;
+    position: relative;
+    margin-top: 2%;
+   
+}
+div.div_res {
+    text-align: center;
+    font-size: 500px;
+}
+.relogio .div_res{
+    font-size: 70px;
+    margin-top: 80px;
+    margin: 0 auto;
+}
+div.div_ponto:hover {
+    background-color: #034e84;
+    scale: 1.1;
+
+}
+
+div.historico_ponto {
+    display: block;
+    border-radius: 15px;
+    margin: 0 auto;
+    height: 30%;
+    max-height: 30%;
+    width: 40%;
+    background-color: rgba(255, 255, 255, 0.900);
+    border: solid black 1px;
+}
+
+div.header {
+    display: flex;
+    align-items: center;
+}
+
+div.historico_ponto h4 {
+  
+    font-size: 20px;
+}
+
+div.line {
+    margin: 0 auto;
+    width: 98%;
+    height: 1px;
+    background-color: #034e84;
+    margin: 5px 0 5px;
+}
+
+img.clock_icon {
+    height: 30px;
+    width: 30px;
+    
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: max-content;
+    margin-top: 25vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1vh;
+    font-size: 10px;
+    text-decoration: underline;
+    font-style: italic;
+
+
+}
+
+div.container_dados {
+    margin: 5% 2% ;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    width: 25%;
+    height: 40%;
+    background-color: rgba(255, 255, 255, 0.900);
+    z-index: 10;
+    border-radius: 15px ;
+    border: solid black 1px;
+
+}
+div.container_dados h3{
+    text-align: center;
+    padding: 3px;
+    margin-top: 10px;
+}
+div.line_dados{
+    background-color: #034e84;
+    width: 98%;
+    height: 1px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+div.content2 {
+    right: 2%;
+    top: 19%;
+    position: absolute;
+    width: 20%;
+    height: 50%;
+    background-color: rgba(255, 255, 255, 0.900);
+    z-index: 10;
+    border-radius: 15px ;
+    border: solid black 1px;
+
+}
+#log {
+    display: flex;
+    flex-direction: column; /* Empilha os registros verticalmente */
+    gap: 10px; /* Espaçamento entre registros */
+    
+}
+p{
+    font-family: 'inriaSans', sans-serif;
+    font-size: large 20px;
+}
+#log {
+    display: flex;
+    flex-direction: column; /* Empilha os registros verticalmente */
+    gap: 10px; /* Espaçamento entre registros */
+}
+
+.registro-container {
+    display: flex; /* Coloca os elementos lado a lado */
+    justify-content: space-between; /* Espaça os elementos igualmente */
+    padding: 5px 10px; /* Adiciona um espaçamento interno */
+    background-color: #f4f4f4; /* Fundo claro para destacar */
+    border: 1px solid #ddd; /* Borda sutil */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombras leves */
+    max-height: 30%;
+}
+
+.registro {
+    margin: 0 5px; /* Espaçamento entre os textos */
+    font-size: 14px; /* Ajuste no tamanho da fonte */
+    font-weight: bold; /* Deixa os textos em negrito */
+    color: #034f84; /* Cor primária */
+}
+/* O Modal (inicialmente escondido) */
+.modal {
+    display: none; /* Esconde o modal */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4); /* Cor de fundo semi-transparente */
+    padding-top: 60px;
+}
+
+/* O conteúdo do modal */
+.modal-content {
+    background-color: #ffffff;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #e9e9e9;
+    width: 25%; /* Ajuste a largura do modal */
+    text-align: center;
+    border-radius: 15px;
+}
+
+/* O botão de fechar */
+.close {
+    color: #ff0101;
+    float:right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilos para os botões de confirmação e cancelamento */
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+#confirmar-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+#cancelar-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+}
+
+
+
+
+
+/* Estilos Globais */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2980b9;
+    --accent-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    --success-color: #2ecc71;
+    --warning-color: #f39c12;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+    --black: black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 0px;
+    border-bottom: 2px solid var(--primary-color);
+    flex-wrap: wrap;
+}
+
+header h1 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 70;
+}
+
+.clock-container {
+    text-align: right;
+}
+
+#clock {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--black);
+}
+
+#date {
+    font-size: 1.2rem;
+    color: var(--black);
+}
+
+/* Informações do Usuário */
+.user-info {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+}
+
+.avatar {
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    margin-right: 20px;
+}
+
+.user-details {
+    flex-grow: 1;
+}
+
+.user-details input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+}
+
+.user-details input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+/* Cartão de Ponto */
+.punch-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+}
+
+.punch-card h2 {
+    color: var(--dark-color);
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.punch-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.punch-button {
+    padding: 15px;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+
+.punch-button i {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+
+.punch-button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+#punch-in {
+    background-color: var(--success-color);
+}
+
+#punch-in:hover {
+    background-color: #27ae60;
+}
+
+#punch-out {
+    background-color: var(--accent-color);
+}
+
+#punch-out:hover {
+    background-color: #c0392b;
+}
+
+#lunch-out, #lunch-in {
+    background-color: var(--warning-color);
+}
+
+#lunch-out:hover, #lunch-in:hover {
+    background-color: #e67e22;
+}
+
+/* Registros do Dia */
+.records {
+    background-color: white;
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+}
+
+.records h2 {
+    color: var(--dark-color);
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.records-container {
+    min-height: 100px;
+    border: 1px dashed #ddd;
+    border-radius: var(--border-radius);
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+/* Histórico de Pontos */
+.history-section {
+    background-color: white;
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+    overflow-x: auto;
+}
+
+.history-section h2 {
+    color: var(--dark-color);
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+#history-table th, #history-table td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+#history-table th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+}
+
+#history-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#history-table tr:hover {
+    background-color: #e6f7ff;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+/* Histórico completo*/
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .clock-container {
+        text-align: center;
+        margin-top: 15px;
+    }
+    
+    .user-info {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .avatar {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .punch-buttons {
+        grid-template-columns: 1fr;
+    }
+    
+    .punch-button {
+        height: 80px;
+    }
+}
+
+/* Animações */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.punch-button:active {
+    animation: pulse 0.3s ease-in-out;
+}
+img.logoTime{
+    width: 200px;
+    height: 100px;
+}
+
+.historico {
+    background-color: white;
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+}
+
+.historico h2 {
+   text-align: center;
+        color: #333;
+        margin-bottom: 30px;
+    }
+
+.historico-container {
+    min-height: 100px;
+    border: 1px dashed #ddd;
+    border-radius: var(--border-radius);
+    padding: 15px;
+    display: flex;
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center;    /* Centraliza verticalmente */
+        min-height: 150px;     /* Altura mínima para visualização */
+    background-color: #f9f9f9;
+}
+.pdf-button{
+      background-color: #e74c3c;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+}
+  .pdf-button:hover {
+        background-color: #c0392b;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .pdf-button i {
+        font-size: 18px;
+    }
