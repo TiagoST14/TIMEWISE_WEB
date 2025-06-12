@@ -1,0 +1,185 @@
+/* Estilos para o Body e Fundo Visual - Melhorado para Responsividade */
+body {
+    /* Mantém seu fundo bacana! O SVG com background-size: cover já é responsivo por natureza */
+    background-color: #FFFFFF; /* Cor de fundo primária */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23b6e0fd' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%236cc1fc' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%2323a2fa' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23057bcd' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23034F84' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed; /* Mantém o fundo fixo ao rolar */
+    background-size: cover; /* Cobre toda a área, garantindo responsividade do fundo */
+    background-position: center; /* Centraliza o fundo */
+    background-repeat: no-repeat; /* Evita repetição */
+
+
+    font-family: 'Arial', sans-serif; /* Uma fonte comum e legível, você pode mudar */
+    color: #333; /* Cor de texto padrão escura */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Garante que não haja scroll horizontal indesejado */
+}
+
+/* Estilo para o cabeçalho (baseado no seu HTML original) */
+/* Mantendo a div.head como container do cabeçalho */
+.head {
+    display: flex; /* Alinha itens em uma linha */
+    align-items: center; /* Alinha verticalmente ao centro */
+    justify-content: space-between; /* Distribui espaço entre os elementos */
+    padding: 10px 20px; /* Espaçamento interno */
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
+    backdrop-filter: blur(5px); /* Efeito de desfoque no fundo (moderno!) */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil na parte inferior */
+    position: fixed; /* Fixa o cabeçalho no topo */
+    width: 100%; /* Ocupa a largura total */
+    top: 0; /* Alinha ao topo */
+    left: 0; /* Alinha à esquerda */
+    z-index: 100; /* Garante que o cabeçalho fique acima de outros elementos */
+    box-sizing: border-box; /* Inclui padding na largura total */
+}
+
+/* Estilo Responsivo para a Logo no Cabeçalho */
+.head img {
+    height: 35px; /* Altura padrão da logo */
+    max-height: 40px; /* Altura máxima */
+    width: auto; /* Mantém a proporção */
+    margin-right: 10px;
+}
+
+.head span {
+    font-size: 1.3em; /* Tamanho do título */
+    font-weight: bold;
+    color: #034F84; /* Cor do título */
+    flex-grow: 1; /* Permite que o título ocupe o espaço restante */
+    margin-right: 10px; /* Adiciona espaço entre o título e o botão de voltar */
+}
+
+/* Estilo para o botão de voltar no cabeçalho */
+#voltar_funcionario {
+    background-color: #dc3545; /* Cor vermelha para "voltar" */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex; /* Alinha ícone e texto */
+    align-items: center;
+    gap: 5px; /* Espaço entre ícone e texto */
+    transition: background-color 0.3s ease;
+    flex-shrink: 0; /* Evita que o botão encolha */
+}
+
+#voltar_funcionario:hover {
+    background-color: #c82333;
+}
+
+#voltar_funcionario svg {
+    fill: white; /* Cor do ícone SVG */
+    height: 16px;
+    width: 16px;
+}
+
+
+/* Estilo para a Div que Centraliza o Formulário (divForm) */
+.divForm {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    min-height: 100vh; /* Garante altura total da viewport */
+    padding-top: 70px; /* Adiciona padding no topo para não ficar escondido atrás do cabeçalho fixo */
+    padding-bottom: 20px; /* Adiciona um pouco de espaço na parte inferior */
+    box-sizing: border-box; /* Inclui padding na altura */
+}
+
+/* Estilo para o Formulário (form.form) - Responsivo */
+form.form {
+    display: flex;
+    flex-direction: column; /* Empilha os elementos */
+    width: 95%; /* Use uma porcentagem maior em telas pequenas */
+    max-width: 550px; /* Limita a largura máxima do formulário em telas maiores */
+    padding: 25px; /* Espaçamento interno */
+    background-color: rgba(255, 255, 255, 0.98); /* Fundo branco quase opaco para melhor legibilidade sobre o fundo */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+    box-sizing: border-box; /* Inclui padding na largura e altura */
+    margin: 20px auto; /* Centraliza o formulário dentro da divForm e adiciona margem superior/inferior */
+}
+
+/* Estilos para Labels */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+    font-size: 0.95em; /* Ajuste sutil no tamanho */
+}
+
+/* Estilos para Inputs e Selects - Responsivos */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+select {
+    height: 45px; /* Altura um pouco maior para inputs */
+    width: 100%; /* Ocupa a largura total do container */
+    padding: 10px 12px; /* Mais padding */
+    border-radius: 5px; /* Cantos mais arredondados */
+    border: 1px solid #ccc;
+    margin-bottom: 18px; /* Aumenta o espaço abaixo dos campos */
+    box-sizing: border-box; /* Inclui padding e border no tamanho total */
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+input:focus,
+select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.3); /* Sombra de foco mais visível */
+    outline: none;
+}
+
+/* Estilos para o Botão de Cadastro - Responsivo */
+form.form button[type="submit"] {
+    /* Seus estilos originais para a animação */
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: #ffffff;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+    overflow: hidden;
+    height: 45px; /* Altura um pouco maior */
+    /* Alteração para responsividade: */
+    width: 90%; /* Ocupa 90% da largura do formulário */
+    max-width: 300px; /* Limita a largura máxima */
+    cursor: pointer;
+
+    /* Centraliza o botão */
+    margin: 20px auto 0 auto; /* Espaço acima e centralizado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Garante que o texto fique centralizado se quebrar linha */
+}
+
+/* Animação do botão (mantida do seu CSS) */
+form.form button[type="submit"]::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color:#034F84;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(255, 255, 255, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(255, 255, 255)
+}

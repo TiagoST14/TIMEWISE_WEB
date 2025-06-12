@@ -1,0 +1,117 @@
+body{
+  background-color: #FFFFFF;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23b6e0fd' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%236cc1fc' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%2323a2fa' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23057bcd' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23034F84' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
+  max-width: 100%;
+  max-height: 100vh;
+  overflow-x: hidden;
+  background-color: #ffffff;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh
+}
+.cardFuncionario {
+    border-radius: 13px;
+    height: 100px;
+    width: 30%;
+    margin-top: 3rem;
+    background-color: #034F84;
+    padding: 20px;
+    border: 2px solid black;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    cursor: pointer;
+}
+.cardFuncionario h5{
+    padding: 4px;
+    font-size: 15px;
+    
+}
+.divBusca{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.divBusca input{
+    padding: 10px;
+    width: 20%;
+    border-radius: 12px;
+    border: 1px solid #034F84;
+}
+.divBusca input:active{
+    border: 3px solid #034F84;
+}
+
+.button {
+    --main-focus: #2d8cf0;
+    --font-color: #323232;
+    --bg-color-sub: #dedede;
+    --bg-color: #eee;
+    --main-color: #323232;
+    position: relative;
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--main-color);
+    box-shadow: 4px 4px var(--main-color);
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .button, .button__icon, .button__text {
+    transition: all 0.3s;
+  }
+  
+  .button .button__text {
+    transform: translateX(22px);
+    color: var(--font-color);
+    font-weight: 600;
+  }
+  
+  .button .button__icon {
+    position: absolute;
+    transform: translateX(109px);
+    height: 100%;
+    width: 50px;
+    background-color: var(--bg-color-sub);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 35.2px;
+  }
+  
+  .button .svg {
+    width: 20px;
+    fill: var(--main-color);
+    
+    
+  }
+  
+  .button:hover {
+    background: var(--bg-color);
+    
+  }
+  
+  .button:hover .button__text {
+    color: transparent;
+  }
+  
+  .button:hover .button__icon {
+    width: 100%;
+    transform: translateX(0);
+    
+  }
+  
+  .button:active {
+    transform: translate(3px, 3px);
+    box-shadow: 0px 0px var(--main-color);
+    
+  }
+  

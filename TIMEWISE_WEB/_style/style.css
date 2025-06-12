@@ -1,0 +1,684 @@
+body,
+html {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-family: 'inriaSans', sans-serif;
+}
+
+.barraNav {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: #034F84;
+    height: 25px;
+    width: 100%;
+}
+
+.containerFig {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+.containerFig img {
+    position: absolute;
+    left: 50%;
+    border-radius: 2px;
+    top: 10%;
+    max-height: 400px;
+    max-width: 600px;
+
+}
+.containerFig img .div.loader {
+    left: 60%;
+}
+.imgLogo {
+    display: flex;
+    align-items: center;
+    width: 320px;
+    display: flex;
+    position: absolute;
+    left: 15%;
+    top: 30px;
+    margin: 0;
+}
+
+.imgLogo img {
+    height: 196px;
+    width: 320px;
+}
+
+.linhaDeMarcacao {
+
+    background-color: black;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    height: 3px;
+
+
+}
+
+
+
+.containerFig .loader{
+    top: -25px;
+    left: 62.5%;
+    transform: translateX(-50%);
+    position: absolute;
+    width: 600px;
+    height: 2px;
+    margin: 0;
+    border: 0;
+    border-top: 2px solid black;
+    --height-of-loader: 2px;
+    --loader-color: #034F84;
+    height: var(--height-of-loader);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+.loader::before {
+    content: "";
+    position: absolute;
+    background: var(--loader-color);
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    border-radius: 30px;
+    animation: moving 20s ease-in-out infinite;
+    ;
+}
+
+@keyframes moving {
+
+        
+        50% {
+            width: 100%;
+        }
+    
+        100% {
+            width: 0;
+            right: 0;
+            left: unset;
+        }
+    }
+    
+
+
+
+.containerLinha {
+    display: flex;
+
+    justify-content: space-around;
+    width: 600px;
+    margin-top: 10px;
+    position: absolute;
+    left: 46%;
+    top: 520px;
+
+}
+
+.linhaVertical {
+    position: relative;
+    border: 0;
+    width: 3px;
+    height: 25px;
+    border-left: 2px solid black;
+    margin: 0 90px 0;
+    align-items: flex-end;
+}
+
+
+.linhaVertical .icon {
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    width: 40px;
+    height: 40px;
+}
+.linhaVertical .icon{
+    transition: all 0.3s ease-in-out ;
+}
+@keyframes iconAnimation {
+    0% { transform: scale(1) }
+    50% { transform: scale(1.1)}
+    100% { transform: scale(1); left: unset;}
+  }
+
+.linhaVertical p {
+    text-align: center;
+    transform: translateX(-50%);
+    position: absolute;
+    font-size: 14px solid;
+    font-family: 'inria Sans';
+    top: 90px;
+    margin: 0;
+
+}
+
+.containerFig .linhaVertical {
+    
+    animation: iconAnimation 2s ease-in-out infinite;
+    animation-delay: 20s;
+  }
+.containerFig .linhaVertical:nth-child(1){
+    animation-delay: 20s;
+}
+.containerFig .linhaVertical:nth-child(2){
+    animation-delay: 20s;
+}
+.containerFig .linhaVertical:nth-child(3){
+    animation-delay: 20s;
+}
+.containerFig .linhaVertical:nth-child(4){
+    animation-delay: 20s;
+    
+}
+.containerFig .linhaVertical:hover {
+    transform: scale(1.1)
+}
+
+.login {
+    position: absolute;
+    text-align: center;
+    top: 220px;
+    left: 15%;
+    display: block;
+    width: 320px;
+    height: 420px;
+    text-align: center;
+
+}
+
+
+.divLogin {
+    display: none;
+    position: absolute;
+    background-color: #034F84;
+    width: 100%;
+    height: 420px;
+    padding: 15px;
+    border-radius: 10px;
+    border: solid black 1px;
+    z-index: 100;
+    
+}
+.divLoginFunc{
+    display: none;
+    z-index: 50; /* Defina um valor um pouco menor */
+    position: absolute;
+    background-color: #034F84;
+    width: 100%;
+    height: 420px;
+    padding: 15px;
+    border-radius: 10px;
+    border: solid black 1px;
+    text-decoration: center;
+    box-shadow: 6px 10px 60px #034F84;
+}
+.tipoUser{
+    position: absolute;
+    background-color: #034F84;
+    width: 320px;
+    height: 420px;;
+    left: 15%;
+    top: 220px;
+    padding: 15px;
+    border-radius: 10px;
+    border: solid black 1px;
+    text-decoration: center;
+    box-shadow: 6px 10px +60px #034F84;
+    display: block;
+    z-index: 10;
+}
+.tipoUser button{
+    
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    top: 20%;
+    width: 200px;
+    height: 50px;
+    margin-top: 10%;
+    text-align: center;
+    padding: 10px;
+}
+.tipoUser p{
+    font-size: 20px;
+    margin: 0 auto;
+    font-family: 'inriaSans', sans-serif;
+    color: white;
+    text-align: center;
+
+}
+.loginFunc input[type=password],
+input[type=text ] {
+    height: 20px;
+    width: 85%;
+    padding: 5px;
+    border-radius: 2px;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.login input[type=password],
+input[type=email] {
+    height: 20px;
+    width: 85%;
+    padding: 5px;
+    border-radius: 2px;
+    border: 2px solid rgb(255, 255, 255);
+    
+}
+
+.erroUser {
+    border: 3px solid red;
+    background-color: red;
+}
+
+.login a {
+    display: flex;
+    font-family: 'inria Sans';
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin-bottom: 25px;
+
+}
+
+.login p {
+    font-size: 17px;
+    text-align: justify;
+    font-family: 'inria Sans';
+    color: rgb(255, 255, 255);
+
+}
+
+label {
+    margin-top: 20px;
+}
+
+.login .divLogin .botao {
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    top: 250px;
+    margin-top: 20px;
+
+
+}
+
+.botao {
+    margin-top: 50px;
+    height: 40px;
+    width: 180px;
+    font-size: 19px;
+    font-family: 'inria Sans';
+    color: black;
+    background-color: white;
+    border-radius: 2px;
+    animation-name: botao1;
+    transition: background-color 0.3 ease-in-out;
+    cursor: pointer;
+
+}
+
+.botao:hover {
+    color: white;
+    background-color: #034F84;
+
+}
+
+.link {
+    display: block;
+    position: absolute;
+    top: 350px;
+}
+
+button {
+
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: #ffffff;
+    position: relative;
+    font-weight: 1000;
+    font-size: 18px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+    overflow: hidden;
+    height: 40px;
+    width: 120px;
+    cursor: pointer;
+
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #034F84;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(255, 255, 255, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(255, 255, 255, 0.27);
+    transition: all 250ms
+}
+
+button:hover {
+    color: #e8e8e8;
+}
+
+button:hover::before {
+    width: 100%;
+}
+
+.hidden{
+    display: none;
+}
+.visible{
+    
+    display: block;
+}
+.success {
+    color:white;
+    font-weight: bold;
+    background-color: rgba(0, 128, 0, 0.432);
+    border: 2px solid green;
+    padding: 8px;
+    margin-top: 10px;
+    font-family: 18px 'inria Sans';
+    border-radius: 5px;
+  }
+  .error{
+    color:white;
+    font-weight: bold;
+    background-color: rgba(255, 0, 0, 0.432);
+    border: 2px solid red;
+    padding: 8px;
+    margin-top: 10px;
+    font-family: 18px 'inria Sans';
+    border-radius: 5px;
+  }
+  
+@media (max-width: 1300px) {
+    * {
+        font-size: 14px;
+    }
+    .div.loader{
+        width: auto;
+    }
+
+    .login input[type=password],
+    input[type=email] {
+        height: 15px;
+        width: 70%;
+    }
+
+    .login.botao {
+        width: auto;
+    }
+    
+    .containerFig img .loader {
+        width: auto;
+        
+    }
+
+    .barraNav div {
+        width: 100%
+    }
+}
+
+@media (max-width:900px) and (min-width:30px) {
+    * {
+        font-size: 10px
+    }
+
+    .containerFig {
+        display: none;
+    }
+
+    .login input[type=password],
+    input[type=email] {
+        height: 15px;
+        width: 70%;
+    }
+    .loader{
+        display: none;
+    }
+    .login {
+        margin: auto;
+
+    }
+    .div.loader{
+        width: auto;
+    }
+
+}
+
+.respostaLogin .res_bom {
+    background-color: green;
+}
+.acessibilidade img{
+    height: 60px;
+    width:60px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    align-items: center;
+    position: absolute;
+}
+.acessibilidade{
+    background-color: #034F84;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    position: relative;
+    top: 75%;
+    left: 93%;
+    cursor: pointer;
+}
+.acessibilidade {
+	-webkit-animation: acessibilidade 1s ease-in-out ;
+	        animation: acessibilidade 1s ease-in-out ;
+}
+
+  @keyframes acessibilidade {
+    0% {
+      -webkit-transform: translateX(100px) rotate(540deg);
+              transform: translateX(100px) rotate(540deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) rotate(0deg);
+              transform: translateX(0) rotate(0deg);
+      opacity: 1;
+    }
+  }
+  
+
+  /* Telas médias (tablets) */
+@media (max-width: 1300px) {
+    .containerFig img {
+        max-width: 500px;
+        left: 45%;
+    }
+    
+    .imgLogo {
+        left: 10%;
+    }
+    
+    .login,
+    .tipoUser {
+        left: 10%;
+    }
+    
+    .containerLinha {
+        left: 42%;
+        width: 500px;
+    }
+}
+
+/* Telas pequenas (tablets menores) */
+@media (max-width: 1024px) {
+    .containerFig img {
+        max-width: 400px;
+        top: 15%;
+    }
+    
+    .containerLinha {
+        top: 480px;
+        width: 400px;
+    }
+}
+
+/* Telas muito pequenas (smartphones) */
+@media (max-width: 768px) {
+    .containerFig img {
+        position: relative;
+        left: auto;
+        top: auto;
+        margin: 20px auto;
+        display: block;
+    }
+    
+    .imgLogo {
+        position: relative;
+        left: auto;
+        top: auto;
+        margin: 20px auto;
+    }
+    
+    .login,
+    .tipoUser {
+        position: relative;
+        left: auto;
+        top: auto;
+        margin: 20px auto;
+    }
+    
+    .containerLinha,
+    .linhaDeMarcacao {
+        display: none;
+    }
+    
+    .acessibilidade {
+        left: 85%;
+        top: 85%;
+    }
+}
+
+/* Ajustes para smartphones muito pequenos */
+@media (max-width: 480px) {
+    .imgLogo img {
+        width: 280px;
+        height: auto;
+    }
+    
+    .login,
+    .tipoUser,
+    .divLogin,
+    .divLoginFunc {
+        width: 95%;
+        height: auto;
+        padding: 10px;
+    }
+    
+    .botao {
+        width: 90%;
+    }
+    
+    .acessibilidade {
+        width: 70px;
+        height: 70px;
+        left: 80%;
+    }
+    
+    .acessibilidade img {
+        width: 50px;
+        height: 50px;
+    }
+}
+/* Garante que elementos focados sejam visíveis */
+:focus {
+  outline: 3px solid #034F84;
+  outline-offset: 2px;
+}
+
+/* Estilos para leitores de tela */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Melhoria de contraste para links */
+a {
+  color: #034F84;
+  text-decoration: underline;
+}
+
+/* Ajustes para alto contraste */
+@media (prefers-contrast: more) {
+  body {
+    background: black;
+    color: white;
+  }
+  
+  input, button {
+    border: 2px solid white;
+  }
+}
+/* Garante que elementos focados sejam visíveis */
+:focus {
+  outline: 3px solid #034F84;
+  outline-offset: 2px;
+}
+
+/* Estilos para leitores de tela */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Melhoria de contraste para links */
+a {
+  color: #034F84;
+  text-decoration: underline;
+}
+
+/* Ajustes para alto contraste */
+@media (prefers-contrast: more) {
+  body {
+    background: black;
+    color: white;
+  }
+  
+  input, button {
+    border: 2px solid white;
+  }
+}

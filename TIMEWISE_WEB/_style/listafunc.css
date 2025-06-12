@@ -1,0 +1,223 @@
+/* Variáveis de cor */
+:root {
+    --primary-color: #034e84;
+    --primary-light: #b6e0fd;
+    --primary-lighter: #f5f7fa;
+    --text-dark: #2c3e50;
+    --text-light: #ecf0f1;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'inriaSans', sans-serif;
+  max-height: 100vh;
+}
+
+/* Header Moderno */
+.main-header {
+    width: 100%;
+    background-color: var(--primary-color);
+    box-shadow: var(--shadow);
+    padding: 1rem 2rem;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+.logo {
+    width: 130px;
+    height: auto;
+    transition: var(--transition);
+    margin-right: auto;
+}
+
+.logo:hover {
+    transform: rotate(-5deg) scale(1.05);
+}
+
+.logout-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-light);
+    border: 2px solid white; /* Borda branca fixa */
+    border-radius: 50px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    backdrop-filter: blur(5px);
+    margin-left: auto;
+}
+
+.logout-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.logout-button svg {
+    transition: var(--transition);
+}
+
+.logout-button:hover svg {
+    transform: translateX(-3px);
+}
+
+body {
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    color: var(--text-dark);
+    min-height: 100vh;
+    overflow-x: hidden;
+    line-height: 1.6;
+    background: linear-gradient(135deg, var(--primary-lighter) 0%, var(--primary-light) 100%);
+}
+
+.container {
+  width: 80%;
+  margin: 50px auto;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+th {
+  background-color: #f8f8f8;
+  text-align: left;
+}
+
+td {
+  text-align: left; /* Para garantir que o texto no td fique alinhado à esquerda */
+}
+
+
+button {
+  background-color: #e74c3c; /* Cor de fundo do botão */
+  color: white; /* Cor do texto */
+  border: none; /* Sem borda */
+  padding: 5px 10px; /* Espaçamento interno do botão */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  border-radius: 5px; /* Bordas arredondadas */
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: #c0392b; /* Cor do botão ao passar o mouse */
+}
+
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.search-container input {
+  padding: 10px;
+  width: 40%;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-container button {
+  background-color: #2ecc71; /* Cor de fundo do botão */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.search-container button:hover {
+  background-color: #27ae60; /* Cor do botão ao passar o mouse */
+}
+
+/* Estilos para paginação e botões */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
+
+.pagination-container button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.pagination-container button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.pagination-container span {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Estilos para os botões de ação */
+.edit-btn {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    margin-right: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.edit-btn:hover, .delete-btn:hover {
+    opacity: 0.9;
+}
+
+#itensPorPagina {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}

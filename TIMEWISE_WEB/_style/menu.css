@@ -1,0 +1,86 @@
+.main-header {
+    width: 100%;
+    background-color: var(--primary-color);
+    box-shadow: var(--shadow);
+    padding: 1rem 2rem;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+.logo {
+    width: 130px;
+    height: auto;
+    transition: var(--transition);
+    margin-right: auto;
+}
+
+.logo:hover {
+    transform: rotate(-5deg) scale(1.05);
+}
+
+.welcome-message {
+    display: flex;
+    width: auto;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-light);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    
+}
+
+.welcome-message span {
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+.welcome-message p {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+}
+
+.logout-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-light);
+    border: 2px solid white; /* Borda branca fixa */
+    border-radius: 50px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    backdrop-filter: blur(5px);
+    margin-left: auto;
+}
+
+.logout-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.logout-button svg {
+    transition: var(--transition);
+}
+
+.logout-button:hover svg {
+    transform: translateX(-3px);
+}
+:root {
+    --primary-color: #034e84;
+    --primary-light: #b6e0fd;
+    --primary-lighter: #f5f7fa;
+    --text-dark: #2c3e50;
+    --text-light: #ecf0f1;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./_style/home.css">
+    <title>Dashboard TimeWise</title>
+</head>
+<body>
+    <div class="background-effects"></div>
+    
+    <header class="main-header">
+        <div class="header-content">
+            <img src="./_img/logobranca.png" alt="TimeWise Logo" class="logo">
+            <div class="welcome-message">
+                <span>Bem vindo</span>
+                <p id="usuario_log">Usuário</p>
+            </div>
+            <button id="sair" class="logout-button">
+                <svg height="16" width="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+                    <path d="M874.690416 495.52477c0 11.2973-9.168824 20.466124-20.466124 20.466124l-604.773963 0 188.083679 188.083679c7.992021 7.992021 7.992021 20.947078 0 28.939099-4.001127 3.990894-9.240455 5.996574-14.46955 5.996574-5.239328 0-10.478655-1.995447-14.479783-5.996574l-223.00912-223.00912c-3.837398-3.837398-5.996574-9.046027-5.996574-14.46955 0-5.433756 2.159176-10.632151 5.996574-14.46955l223.019353-223.029586c7.992021-7.992021 20.957311-7.992021 28.949332 0 7.992021 8.002254 7.992021 20.957311 0 28.949332l-188.073446 188.073446 604.753497 0C865.521592 475.058646 874.690416 484.217237 874.690416 495.52477z"></path>
+                </svg>
+                Sair
+            </button>
+        </div>
+    </header>
+    
+    <main class="dashboard-grid">
+        <div class="card" id="card_user">
+            <div class="card-icon">
+                <img src="./_img/account.svg" alt="Ícone Usuários">
+            </div>
+            <button class="card-button">Usuários</button>
+        </div>
+        
+        <div class="card" id="cardEmpresa">
+            <div class="card-icon">
+                <img src="./_img/apartment.svg" alt="Ícone Empresa">
+            </div>
+            <button class="card-button">Empresa</button>
+        </div>
+        
+        <div class="card" id="cardFuncionario">
+            <div class="card-icon">
+                <img src="./_img/badge.svg" alt="Ícone Funcionários">
+            </div>
+            <button class="card-button">Funcionários</button>
+        </div>
+        
+        <div class="card" id="cardRegistro">
+            <div class="card-icon">
+                <img src="./_img/history.svg" alt="Ícone Registros">
+            </div>
+            <button class="card-button">Registros</button>
+        </div>
+        
+        <!-- <div class="card">
+            <div class="card-icon">
+                <img src="./_img/work.svg" alt="Ícone Escalas">
+            </div>
+            <button class="card-button">Escalas</button>
+        </div>
+        
+        <div class="card">
+            <div class="card-icon">
+                <img src="./_img/source_environment.svg" alt="Ícone Setores">
+            </div>
+            <button class="card-button">Setores</button>
+        </div> -->
+    </main>
+    
+    <footer class="main-footer">
+        <p>Powered by <strong>TimeWise Enterprise</strong>™ 2024</p>
+    </footer>
+
+    <div id="logout-popup" class="popup-container">
+    <div class="popup-content">
+        <h3>Deseja realmente sair?</h3>
+        <div class="popup-buttons">
+            <button id="logout-confirm" class="popup-button confirm-button">Sim</button>
+            <button id="logout-cancel" class="popup-button cancel-button">Não</button>
+        </div>
+    </div>
+    </div>
+    
+    <script src="./_js/home.js"></script>
+</body>
+</html>

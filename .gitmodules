@@ -1,0 +1,3 @@
+[submodule "TIMEWISE_WEB"]
+	path = TIMEWISE_WEB
+	url = https://github.com/TimeWiseEnterprise/TIMEWISE_WEB.git

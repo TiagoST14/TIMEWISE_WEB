@@ -1,0 +1,326 @@
+:root {
+    --primary-color: #034F84;
+    --secondary-color: #23a2fa;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --success-color: #28a745;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #b6e0fd 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: var(--dark-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+/* ✅ HEADER - alinhamento horizontal fixo */
+.card-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.back-btn {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    gap: 8px;
+    background-color: white;
+    color: var(--primary-color);
+    border: none;
+    padding: 10px 16px;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.back-btn:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
+}
+
+.back-btn svg {
+    fill: var(--primary-color);
+}
+
+.card-header h2 {
+    font-weight: 500;
+    font-size: 1.8rem;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.card-header img {
+    height: 100px;
+    width: auto;
+}
+
+/* ✅ FORM CONTENT */
+.card-body {
+    padding: 30px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--dark-color);
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(35, 162, 250, 0.2);
+}
+
+.submit-btn {
+    grid-column: 1 / -1;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #023a63;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Contêiner para mensagens */
+.message-box {
+    margin: 0 0 1rem 0; /* margem inferior para separar do botão */
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    display: none;
+    max-width: 400px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.message-box.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message-box.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+
+/* ✅ RESPONSIVO */
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-header {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 30px 20px;
+    }
+
+    .back-btn {
+        position: static;
+        margin: 0 auto;
+    }
+
+    .card-header h2 {
+        position: static;
+        transform: none;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .card-header img {
+        height: 50px;
+        margin-top: 10px;
+    }
+}
+
+/* Estilos melhorados para o popup */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-out;
+    backdrop-filter: blur(3px);
+}
+
+.popup-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-content {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    max-width: 350px;
+    width: 90%;
+    transform: translateY(20px);
+    transition: transform 0.3s ease-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.popup-overlay.active .popup-content {
+    transform: translateY(0);
+}
+
+.popup-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #4CAF50, #2E7D32);
+}
+
+.popup-content.error::before {
+    background: linear-gradient(90deg, #f44336, #c62828);
+}
+
+.popup-content h3 {
+    margin: 0 0 15px;
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.popup-icon {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    color: #4CAF50;
+}
+
+.popup-content.error .popup-icon {
+    color: #f44336;
+}
+
+.popup-btn {
+    display: none; /* Como vamos usar redirecionamento automático */
+}
+
+/* Animação de confirmação */
+@keyframes checkmark {
+    0% { stroke-dashoffset: 100; }
+    100% { stroke-dashoffset: 0; }
+}
+
+.checkmark {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: inline-block;
+    stroke-width: 3;
+    stroke: #4CAF50;
+    stroke-miterlimit: 10;
+    margin: 15px auto;
+    box-shadow: inset 0 0 0 #4CAF50;
+    animation: checkmark 0.6s ease-in-out forwards;
+}
+
+.error-mark {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: inline-block;
+    stroke-width: 3;
+    stroke: #f44336;
+    stroke-miterlimit: 10;
+    margin: 15px auto;
+    position: relative;
+}
+
+.error-mark:before, .error-mark:after {
+    content: '';
+    position: absolute;
+    height: 60px;
+    width: 3px;
+    background-color: #f44336;
+    top: 10px;
+    left: 38px;
+}
+
+.error-mark:before {
+    transform: rotate(45deg);
+}
+
+.error-mark:after {
+    transform: rotate(-45deg);
+}

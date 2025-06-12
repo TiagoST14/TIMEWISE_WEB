@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Funcionário | Timewise</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <link rel="stylesheet" href="/TIMEWISE_WEB/_style/novoFuncionario.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <button class="back-btn" id="voltar_funcionario">
+                    <svg height="16" width="16" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1024 1024">
+                        <path d="M874.690416 495.52477c0 11.2973-9.168824 20.466124-20.466124 20.466124l-604.773963 0 188.083679 188.083679c7.992021 7.992021 7.992021 20.947078 0 28.939099-4.001127 3.990894-9.240455 5.996574-14.46955 5.996574-5.239328 0-10.478655-1.995447-14.479783-5.996574l-223.00912-223.00912c-3.837398-3.837398-5.996574-9.046027-5.996574-14.46955 0-5.433756 2.159176-10.632151 5.996574-14.46955l223.019353-223.029586c7.992021-7.992021 20.957311-7.992021 28.949332 0 7.992021 8.002254 7.992021 20.957311 0 28.949332l-188.073446 188.073446 604.753497 0C865.521592 475.058646 874.690416 484.217237 874.690416 495.52477z"></path>
+                    </svg>
+                    Voltar
+                </button>
+                <img src="./_img/logobranca.png" alt="Timewise Logo">
+                <h2>NOVO FUNCIONÁRIO</h2>
+            </div>
+            <div class="card-body">
+                
+                <form action="" method="post" class="form-grid">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" name="nome" id="nome" class="form-control" placeholder="Maria dos Santos" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" id="email" class="form-control" placeholder="email@timewise.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="cpf">CPF</label>
+                        <input type="text" name="cpf" id="cpf" class="form-control" maxlength="14" placeholder="999.999.999-99" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="nascimento">Data de Nascimento</label>
+                        <input type="date" name="nascimento" id="nascimento" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="sexo">Sexo</label>
+                        <select name="sexo" id="sexo" class="form-control" required>
+                            <option value="" disabled selected>Selecione</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" name="telefone" id="telefone" class="form-control" placeholder="(99) 99999-9999" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="endereco">Endereço</label>
+                        <input type="text" name="endereco" id="endereco" class="form-control" placeholder="Rua Tal, 90 - Centro - Cidade/UF" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contrato">Nº do Contrato</label>
+                        <input type="text" name="contrato" id="contrato" class="form-control" placeholder="Nº de Contrato" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="setor">Setor</label>
+                        <input type="text" name="setor" id="setor" class="form-control" placeholder="Ex: Desenvolvimento" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="filial">Filial</label>
+                        <input type="number" name="filial" id="filial" class="form-control" placeholder="Nº da Filial" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="escala">Escala</label>
+                        <input type="text" name="escala" id="escala" class="form-control" placeholder="Código da Escala" required>
+                    </div>
+                    <div id="messageBox" class="message-box"></div>
+                    <button type="submit" class="submit-btn">Cadastrar Funcionário</button>
+                </form>
+            </div>
+        </div>
+    </div>  
+
+   <div class="popup-overlay" id="popupOverlay">
+    <div class="popup-content" id="popupContent">
+        <div class="popup-icon">
+            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52" style="display: none;">
+                <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+            </svg>
+            <div class="error-mark" style="display: none;"></div>
+        </div>
+        <h3 id="popupMessage">Mensagem</h3>
+        <button class="popup-btn" id="popupBtn">OK</button>
+    </div>
+    </div>
+
+    
+
+    <script src="/TIMEWISE_WEB/_js/novoFuncionario.js"></script>
+</body>
+</html>

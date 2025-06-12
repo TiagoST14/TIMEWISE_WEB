@@ -1,0 +1,301 @@
+/* Variáveis de cor */
+:root {
+    --primary-color: #034e84;
+    --primary-light: #b6e0fd;
+    --primary-lighter: #f5f7fa;
+    --text-dark: #2c3e50;
+    --text-light: #ecf0f1;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+    --error-color: #ff0000;
+}
+
+/* Reset e estilos globais */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, var(--primary-lighter) 0%, var(--primary-light) 100%);
+    min-height: 100vh;
+    color: var(--text-dark);
+}
+
+/* Header Moderno */
+.main-header {
+    width: 100%;
+    background-color: var(--primary-color);
+    box-shadow: var(--shadow);
+    padding: 1rem 2rem;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+.logo {
+    width: 130px;
+    height: auto;
+    transition: var(--transition);
+    margin-right: auto;
+}
+
+.logo:hover {
+    transform: rotate(-5deg) scale(1.05);
+}
+
+.welcome-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-light);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.welcome-message span {
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+.welcome-message p {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+}
+
+.logout-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-light);
+    border: 2px solid var(--text-light);
+    border-radius: 50px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    backdrop-filter: blur(5px);
+    margin-left: auto;
+}
+
+.logout-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.logout-button svg {
+    transition: var(--transition);
+}
+
+.logout-button:hover svg {
+    transform: translateX(-3px);
+}
+
+/* Container principal */
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Títulos */
+h1 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    font-family: 'Inria Sans', sans-serif;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Formulário */
+.divInput {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form p {
+    margin: 0.2rem 0;  /* Reduzi a margem vertical */
+    text-align: left;
+    font-size: 1.1rem;
+    font-family: 'Inria Sans', sans-serif;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.form input {
+    width: 100%;
+    padding: 10px 12px;  /* Reduzi um pouco o padding */
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: var(--transition);
+    margin-top: 0.3rem;  /* Reduzi a margem superior */
+}
+
+.form input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(3, 78, 132, 0.2);
+}
+
+/* Se quiser ainda mais compacto, pode usar: */
+.form-compact p {
+    margin: 0.1rem 0;
+}
+
+.form-compact input {
+    margin-top: 0.1rem;
+    padding: 8px 10px;
+}
+
+input:focus + .inputBorda {
+    width: 100%;
+}
+
+/* Estilo para inputs numéricos */
+input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Botões */
+.botao {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-top: 1.5rem;
+    font-weight: 600;
+    width: 100%;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.botao:hover {
+    background-color: #023b63;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(3, 78, 132, 0.3);
+}
+
+/* Classes de erro */
+.erroUser {
+    border: 2px solid var(--error-color) !important;
+    background-color: rgba(255, 0, 0, 0.05);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h3 {
+        font-size: 1rem;
+    }
+    
+    .divInput {
+        width: 90%;
+    }
+    
+    .form input {
+        width: 100%;
+    }
+}
+
+/* Estilos do Popup */
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: popupFadeIn 0.3s ease-out;
+}
+
+@keyframes popupFadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.popup-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.popup-button:hover {
+    background-color: #023b63;
+}
